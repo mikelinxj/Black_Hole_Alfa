@@ -23,7 +23,7 @@
 ## Features
 
 - Base: código principal del juego.
-        - Game_Over: código de interfas de eliminación por colisión o por falta de tiempo.
+- Game_Over: código de interfas de eliminación por colisión o por falta de tiempo.
 - Index: código de menú de inicio del juego.
 - Looby: código de elección de personajes en el juego, a su vez interfas entre el Index y la Base.
 - Music: código de aplacación de la banda sonora.
