@@ -224,7 +224,7 @@ void draw(){
     background(10);//background(cR,cG,cB);
     //image(im[3],0,0,1920,1000);
     fill(#0779F0);
-    rect(Xx,Yy,-sizeJugador/2,-sizeJugador/2);
+    //rect(Xx,Yy,-sizeJugador/2,-sizeJugador/2);
     imageMode(CENTER);
     image(planetas[0],Xx-sizeJugador/4 + 2 ,Yy-sizeJugador/4 + 2 ,sizeJugador,sizeJugador);
       
