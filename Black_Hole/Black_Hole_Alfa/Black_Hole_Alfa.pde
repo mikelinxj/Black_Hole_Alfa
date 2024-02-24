@@ -75,7 +75,7 @@ PImage over[] = new PImage[1];
 String imFile5[] = {"game_over.jpg"};
 
 //RELOAD
-boolean reload = false;
+boolean reload = true;
 
 void setup(){
 //GENERAL
@@ -215,6 +215,7 @@ void draw(){
     //LOBBY && INDEX
     if (keyCode == ' '){ // ' ' ---> es el teclado de barra espaciadora
       inicio = true;
+      reload = false;
       t = millis();//inicio el contador de tiempo 
     }
   }
@@ -411,7 +412,6 @@ void draw(){
     Y3 = int(random(height+100));
     
     game_over = false;
-    reload = false;
   }
   noCursor(); // Oculta el cursor predeterminado
   
@@ -421,31 +421,33 @@ void keyPressed(){
   //BASE
   
   if (keyPressed){
-    if (key == 'w' || key == 'W') {
+    if (key == 'w' || key == 'W' || keyCode == UP) {
       Yy = Yy - speed;
     }
-    if (key == 's' || key == 'S') {
+    if (key == 's' || key == 'S' || keyCode == DOWN) {
       Yy = Yy + speed;
     }
-    if (key == 'a' || key == 'A') {
+    if (key == 'a' || key == 'A' || keyCode == LEFT) {
       Xx = Xx - speed;
     }
-    if (key == 'd' || key == 'D') {
+    if (key == 'd' || key == 'D' || keyCode == RIGHT) {
       Xx = Xx + speed;
     }
    }
    
   //INDEX
   //LOBBY
+  if (lobby == true && reload == true){
+    // 0 ---> 1º imagen ; 8 ---> 9º imagen ; total de imagenes son 9: del 0-8.
+    if (keyCode == LEFT) {
+      select = (select +8 ) % 9;  //(0 + 8)%9 ; devuelve como resto 8, siendo la ultima imagen que he asignado en la array
+    }
   
-  // 0 ---> 1º imagen ; 8 ---> 9º imagen ; total de imagenes son 9: del 0-8.
-  if (keyCode == LEFT) {
-    select = (select +8 ) % 9;  //(0 + 8)%9 ; devuelve como resto 8, siendo la ultima imagen que he asignado en la array
+    if (keyCode == RIGHT) {
+      select = (select + 1) % 9;  //(8 + 1)%9 ; devuelve como resto 0, siendo la primera imagen que he asignado en la array
+    }
   }
-
-  if (keyCode == RIGHT) {
-    select = (select + 1) % 9;  //(8 + 1)%9 ; devuelve como resto 0, siendo la primera imagen que he asignado en la array
-  }
+  
   
   //MUSIC
 
