@@ -9,7 +9,7 @@
         - Looby: código de elección de personajes en el juego, a su vez interfas entre el Index y la Base.
         - Music: código de aplacación de la banda sonora.
         - Reload: código de ayuda a la carga de entre el Game_Over y la Base, reparando errores y configurando las variables a su estado predetermiando.
-    - El archivo "Black_Hole_Alfa" , es el juego acabado , de la cuaĺ en un furturo surgiran nuevas mejoras , se debe este arvhivo ejecutando en la APP Processing.
+    - El archivo "Black_Hole_Alfa" , es el juego acabado , de la cuaĺ en un futuro surgiran nuevas mejoras , se debe este arvhivo ejecutando en la APP Processing.
     
         
 
