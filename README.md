@@ -40,7 +40,7 @@ Una vez dentro de la aplicacion Processing, para ejecutar la música, se debe de
     - Click en "Sketch"
     - Click en "Importar biblioteca..."
     - Click en "Gestionar bibliotecas..."
-    - Buscar "Minim"
+    - Buscar "Minim" o "Sound"
     - Intalar
     - Disfrutar
 ```
